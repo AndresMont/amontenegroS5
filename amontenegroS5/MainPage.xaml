@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="amontenegroS5.MainPage">
+
+    <StackLayout>
+        <Label Text="Consumo de Servicio Web" HorizontalTextAlignment="Center" FontSize="24"/>
+        <ListView x:Name="listaEstudiantes">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lnlNombre" Text="{Binding nombre}"></Label>
+                            <Label x:Name="lnlApellido" Text="{Binding apellido}"></Label>
+                            <Label x:Name="lnlEdad" Text="{Binding edad}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnMostrar" Clicked="btnMostrar_Clicked" Text="Mostrar"/>
+    </StackLayout>
+
+</ContentPage>
